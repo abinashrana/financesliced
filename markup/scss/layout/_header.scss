@@ -1,0 +1,84 @@
+.header{
+	display: block;
+	background: green;
+}
+
+
+
+.hdr-top, .hdr-bottom{
+	display: block;
+}
+
+.hdr-top{
+	background: $clr-green-one;
+	color: white;
+	@include rem-font-size(12px);
+	min-height: 39px;
+	padding: 6px 0;
+}
+
+
+
+.sm-info{
+	display: inline-block;
+	float: left;
+	padding-left: 35px;
+	position: relative;
+	min-height: 27px;
+		.icn{
+			border-radius:50%;
+			background: url(images/icn-sprites.png) no-repeat $clr-green-two;
+			width: 27px;
+			height: 27px;
+			display: inline-block;
+			color: white;
+			position: absolute;
+			left: 0;
+			
+			&.icn-call{
+				background-position: -4px -4px;
+			}
+			&.icn-mail{
+				background-position: -39px -5px;
+			}
+			&.icn-lang{
+				background-position:-74px -4px;
+			}
+		}
+		.txt{
+			display: inline-block;
+			color: white;
+			margin: 7.5px 0;
+			line-height: 1;
+			text-decoration: none;
+		}
+	
+	&.language{
+		margin: 0;
+		float: right;
+		.txt{
+			color:$clr-green-three; 
+			+ .txt{
+				&:before{
+					width: 1px;
+					content: "";
+					height: 10px;
+					background: $clr-green-two;
+					display: inline-block;
+					line-height: 1;
+					margin: 0 8px 0 5px;
+				}
+			}
+			&.active{
+				color: white;
+			}
+			&:hover, &:focus{
+				color: white;
+			}
+		}
+	
+	}
+	&:first-child{
+		margin-right: 68px;
+	}
+}
