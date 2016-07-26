@@ -16,6 +16,10 @@
 	min-height: 39px;
 	padding: 6px 0;
 }
+.hdr-bottom{
+	background: $clr-grey-two;
+	padding: 20px 0;
+}
 
 
 
@@ -80,5 +84,23 @@
 	}
 	&:first-child{
 		margin-right: 68px;
+	}
+}
+
+.navbar-nav{
+	> li {
+		margin: 0 5px;
+		> a{
+			text-transform: uppercase;
+			color: $clr-grey-one;
+			&:hover, &:focus{
+				background: none;
+				color: $clr-red-one;
+			}
+		}
+	}
+	@include media('>=tablet') {
+		float: right;
+		margin: 16px 0;
 	}
 }

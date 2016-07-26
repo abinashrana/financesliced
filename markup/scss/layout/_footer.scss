@@ -34,7 +34,7 @@
 			}
 		}
 		.content{
-			color: $clr-green-six;
+			color: $clr-green-five;
 		}
 	}
 }
@@ -122,23 +122,44 @@
 	
 }
 .split-5{
-	font-size: 0px;
 	padding: 0;
 	list-style: none;
 	margin: 0;
+	@include make-row;
 	> li{
-		padding: 0 22px;
-		display: inline-block;
-		vertical-align:top;
+		@include make-sm-column(8);
 		@include rem-font-size(12px);
-		border-right: 1px $clr-green-six solid;
 		color: $clr-green-six;
+		position: relative;
+		height: 252px;
 		&:first-child{
 			padding-left: 0px;
+		}
+		&:nth-child(2){
+			@include make-sm-column(5);
+			&:before{
+				content: "";
+				width: 1px;
+				display: block;
+				height: 100%;
+				position: absolute;
+				background: $clr-green-six;
+				left: -11px;
+			}
 		}
 		&:last-child{
 			padding-right: 0px;
 			border-width: 0px;
+			@include make-sm-column(3);
+			&:before{
+				content: "";
+				width: 1px;
+				display: block;
+				height: 100%;
+				position: absolute;
+				background: $clr-green-six;
+				left: -11px;
+			}
 		}
 	}
 	
@@ -172,5 +193,73 @@
 	}
 	a{
 		color: $clr-green-five;
+	}
+}
+.group-newsletter{
+	.form-control{
+		height: 40px;
+	
+		border: none;
+		&:first-child{
+			border-radius: 0px;
+			@include rem-font-size(15px);
+		}
+	}
+	.input-group-btn:last-child > .btn{
+		height: 40px;
+		width: 50px;
+		border-radius: 0px;
+		background: $clr-red-one;
+		border: none;
+		background: url(images/icn-sprites.png) no-repeat $clr-red-one;
+		background-position: -69px -35px;
+		text-indent: -9999px;
+	}
+}
+
+.newsletter{
+	padding-right: 22px !important;
+	.content{
+		line-height: 1.8;
+		margin-bottom: 10px;
+		.txt{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.address-block{
+	min-width: 203px;
+}
+
+.scl-icns{
+		.title{
+			margin: 0 !important;
+			
+			.md-title{
+				display: inline-block !important;
+				vertical-align: top;
+			}
+		}
+	.icn-float{
+		display: inline-block;
+		margin-top: -6px;
+		vertical-align: top;
+		font-size: 0px;
+		margin-left: 20px;
+		.icn-scl{
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			background: url(images/icn-scl.png) red;
+			margin: 0 5px;
+			vertical-align: top;
+			&.icn-fb{
+				background-position: 0 0;
+			}
+			&.icn-twt{
+				background-position: 32px 0;
+			}
+		}
 	}
 }
