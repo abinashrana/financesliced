@@ -1,5 +1,0 @@
-owl-carousel
-input-groups
-media embed-responsive
-navbar menu
-

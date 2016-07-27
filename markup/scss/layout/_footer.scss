@@ -47,14 +47,14 @@
 	width: 100%;
 	font-size: 0px;
 	padding-top: 20px;
-	
+	text-align: center;
 	> li{
 		display: inline-block;
 		vertical-align: top;
 		min-width: 165px;
 		border-right: 1px $clr-grey-seven solid;
 		padding: 0 2.35%;
-		min-height: 108px;
+		min-height: 113px;
 		&:first-child{
 			padding-left: 0;
 		}
@@ -69,6 +69,7 @@
 	text-align: center;
 	padding: 5px 0;
 	.numbers{
+	
 		@include rem-font-size(30px);
 		color: $clr-grey-two;
 		display: block;
@@ -81,7 +82,7 @@
 		display: block;
 		@include rem-font-size(12px);
 		text-align: center;
-		color: $clr-grey-two;
+		color: $clr-grey-nine;
 		text-transform: uppercase;
 		&.total{
 			margin-top: 5px;
@@ -171,13 +172,14 @@
 	list-style: none;
 	margin: 0;
 	> li{
-		padding: 0 80px 0 0;
+		padding: 0 22px 0 0;
 		display: inline-block;
 		vertical-align:top;
+		width: 50%;
 		@include rem-font-size(12px);
-		&:last-child{
+		/*&:last-child{
 			padding: 0px;
-		}
+		}*/
 	}
 }
 
@@ -190,9 +192,27 @@
 		list-style: none;
 		display: block;
 		padding: 5px 0;
+		position: relative;
+		padding-left: 15px;
+		&:before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 10px;
+			height: 27px;
+			background: url(images/icn-sprites.png) no-repeat;
+			background-position: -15px -74px;
+			left: 0;
+			top: 0;
+
+		}
 	}
 	a{
 		color: $clr-green-five;
+		text-decoration: none;
+		&:hover, &:focus{
+			color: white;
+		}
 	}
 }
 .group-newsletter{
@@ -202,7 +222,7 @@
 		border: none;
 		&:first-child{
 			border-radius: 0px;
-			@include rem-font-size(15px);
+			@include rem-font-size(14px);
 		}
 	}
 	.input-group-btn:last-child > .btn{
@@ -212,8 +232,11 @@
 		background: $clr-red-one;
 		border: none;
 		background: url(images/icn-sprites.png) no-repeat $clr-red-one;
-		background-position: -69px -35px;
+		background-position:-28px -67px;
 		text-indent: -9999px;
+		&:hover, &:focus{
+			background-color: $clr-grey-one;
+		}
 	}
 }
 
@@ -230,6 +253,21 @@
 
 .address-block{
 	min-width: 203px;
+	address{
+		display: block;
+		@include rem-font-size(12px);
+		p{
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+		a{
+			color:$clr-green-five;
+			text-decoration: none;
+			&:hover, &:focus{
+				color: white;
+			}
+		}
+	}
 }
 
 .scl-icns{
@@ -251,14 +289,38 @@
 			display: inline-block;
 			width: 32px;
 			height: 32px;
-			background: url(images/icn-scl.png) red;
+			background: url(images/icn-sprites.png) no-repeat ;
 			margin: 0 5px;
 			vertical-align: top;
+			position: relative;
+			&:before{
+				content: "";
+				width: 32px;
+				height: 32px;
+				display: block;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0;
+				background: url(images/icn-sprites.png) no-repeat ;
+				transition: opacity 0.8s ease;
+			}
 			&.icn-fb{
-				background-position: 0 0;
+				background-position: -37px -107px;
+				&:before{
+					background-position:-37px -141px
+				}
 			}
 			&.icn-twt{
-				background-position: 32px 0;
+				background-position: -2px -107px;
+				&:before{
+					background-position: -2px -141px;
+				}
+			}
+			&:hover, &:focus{
+				&:before{
+					opacity: 1;
+				}
 			}
 		}
 	}

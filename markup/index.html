@@ -9,7 +9,11 @@
 </head>
 <body>
   <header class="header">
+		<div class="red-bar">
+			NEW
+		</div>
   	<div class="hdr-top">
+  	
   		<div class="container">
 				<div class="wrapper">
 					<div class="sm-info">
@@ -21,7 +25,7 @@
 						<a class="txt" href="#">abc@gmail.com</a>
 					</div>
 					<div class="sm-info language">
-						<span class="icn icn-lang"></span>
+						<span class="icn icn-eng"></span>
 						<a href="#" class="txt">Nepali</a>
 						<a href="#" class="txt active">English</a>
 					</div>
@@ -52,8 +56,15 @@
 
 						</ul>
 
-						<div class="search-block">
+						<div class="searchlink" id="searchlink">
+							<i class="fa fa-search"></i>
 
+							<div class="searchform">
+								<form id="search">
+									<input type="text" class="s" id="s" placeholder="keywords...">
+									<button type="submit" class="sbtn"><i class="fa fa-search"></i></button>
+								</form>
+							</div>
 						</div>
 
 					</div>
@@ -66,6 +77,53 @@
 	<div class="main-body">
   	<div class="container">
 			<div class="wrapper">
+				<section class="banner">
+					<div id="owl-banner" class="owl-carousel owl-banner-slide">
+
+						<div class="item">
+							<img src="images/img-banner-one.jpg" alt="">
+							<div class="owl-txt">
+								<h3 class="title">
+									Assured Returns 
+									&amp; Safety
+								</h3>
+								<h4 class="title sub-title">
+									One Investment 
+									Gives You All
+								</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/img-banner-one.jpg" alt="">
+							<div class="owl-txt">
+								<h3 class="title">
+									Assured Returns 
+									&amp; Safety
+								</h3>
+								<h4 class="title sub-title">
+									One Investment 
+									Gives You All
+								</h4>
+							</div>
+						</div>
+						<div class="item">
+							<img src="images/img-banner-one.jpg" alt="">
+							<div class="owl-txt">
+								<h3 class="title">
+									Assured Returns 
+									&amp; Safety
+								</h3>
+								<h4 class="title sub-title">
+									One Investment 
+									Gives You All
+								</h4>
+							</div>
+						</div>
+						
+					
+
+					</div>
+				</section>
 				<ul class="block-one">
 					<li>
 						<div class="block">
@@ -311,18 +369,10 @@
 								<h3 class="md-title">Publication</h3>
 							</div>
 							<div class="content">
-								<ul class="publication">
-									<li>
-										<figure class="img-holder">
-											<img src="images/img-publication.jpg" alt="">
-										</figure>
-									</li>
-									<li>
-										<figure class="img-holder">
-											<img src="images/img-publication.jpg" alt="">
-										</figure>
-									</li>
-								</ul>
+								<div class="embed-responsive embed-responsive-16by9">
+								
+									<iframe width="854" height="480" class="embed-responsive-item" src="https://www.youtube.com/embed/4p466BzXaK0" frameborder="0" allowfullscreen></iframe>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -367,10 +417,82 @@
 				<div class="block-six">
 					<div class="block">
 						<div class="title">
-							<h3 class="md-title">Publication</h3>
+							<h3 class="md-title">Affiliation &amp; Support</h3>
 						</div>
 						<div class="content">
-							sadsda
+							<div id="owl-logo" class="owl-carousel owl-partners">
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-one.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-two.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-three.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-four.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-five.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-one.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-two.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-three.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-four.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								<div class="item">
+									<a href="#" class="partner-logo">
+										<span>
+											<img src="images/img-logo-five.jpg" alt="">
+										</span>
+									</a>
+								</div>
+								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -491,7 +613,7 @@
 									<p class="txt">Subscribe to get our weekly newsletter delivered directly to your inbox</p>
 									<form action="#" class="form-newsletter">
 										<div class="input-group group-newsletter">
-											<input type="text" class="form-control" placeholder="Search for...">
+											<input type="text" class="form-control" placeholder="Enter your email address">
 											<span class="input-group-btn">
 												<button class="btn btn-default" type="button">Go!</button>
 											</span>
@@ -526,7 +648,8 @@
 										</p>
 										<p>
 											+977-1-4000000, 4000000 <br>
-											+977-1-4000000, 4000000
+											+977-1-4000000, 4000000 <br>
+											<a href="#">nefscun@nefscun.org.np</a>
 										</p>
 									</address>                          
 								</div>
@@ -538,8 +661,28 @@
 		</div>
   </footer>
   
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">How to Use The app...</h4>
+				</div>
+				<div class="modal-body">
+					This is how you would use the app....
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  
   <script src="js/jquery-1.11.2.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.main.js"></script>
 </body>
 </html>
