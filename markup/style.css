@@ -994,7 +994,8 @@ input[type="button"].btn-block {
     vertical-align: top;
     font-size: 12px;
     font-size: 1.2rem;
-    border-right: 1px #128941 solid; }
+    border-right: 1px #128941 solid;
+    color: #128941; }
     .split-5 > li:first-child {
       padding-left: 0px; }
     .split-5 > li:last-child {
