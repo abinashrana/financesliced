@@ -15,6 +15,21 @@
 	@include rem-font-size(12px);
 	min-height: 39px;
 	padding: 6px 0;
+	&:before{
+		
+	}
+}
+.hdr-bottom{
+	background: $clr-grey-two;
+	padding: 20px 0;
+}
+
+.red-bar{
+	background: $clr-red-one;
+	text-align: center;
+	color: white;
+	font-family: 'josefin_sansbold';
+	padding: 3px 0;
 }
 
 
@@ -41,8 +56,11 @@
 			&.icn-mail{
 				background-position: -39px -5px;
 			}
-			&.icn-lang{
+			&.icn-eng{
 				background-position:-74px -4px;
+			}
+			&.icn-np{
+				background-position:-108px -4px;
 			}
 		}
 		.txt{
@@ -80,5 +98,32 @@
 	}
 	&:first-child{
 		margin-right: 68px;
+	}
+}
+
+.navbar-nav{
+	> li {
+		margin: 0 5px;
+		
+		> a{
+			text-transform: uppercase;
+			color: $clr-grey-one;
+			@include rem-font-size(14px);
+			font-family: 'josefin_sansregular';
+			font-weight: 700;
+			&:hover, &:focus{
+				background: none;
+				color: $clr-red-one;
+			}
+		}
+		&.active {
+			> a{
+				color: $clr-red-one;
+			}
+		}
+	}
+	@include media('>=tablet') {
+		float: right;
+		margin: 16px 0;
 	}
 }

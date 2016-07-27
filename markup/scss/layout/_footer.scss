@@ -34,7 +34,7 @@
 			}
 		}
 		.content{
-			color: $clr-green-six;
+			color: $clr-green-five;
 		}
 	}
 }
@@ -47,14 +47,14 @@
 	width: 100%;
 	font-size: 0px;
 	padding-top: 20px;
-	
+	text-align: center;
 	> li{
 		display: inline-block;
 		vertical-align: top;
 		min-width: 165px;
 		border-right: 1px $clr-grey-seven solid;
 		padding: 0 2.35%;
-		min-height: 108px;
+		min-height: 113px;
 		&:first-child{
 			padding-left: 0;
 		}
@@ -69,6 +69,7 @@
 	text-align: center;
 	padding: 5px 0;
 	.numbers{
+	
 		@include rem-font-size(30px);
 		color: $clr-grey-two;
 		display: block;
@@ -81,7 +82,7 @@
 		display: block;
 		@include rem-font-size(12px);
 		text-align: center;
-		color: $clr-grey-two;
+		color: $clr-grey-nine;
 		text-transform: uppercase;
 		&.total{
 			margin-top: 5px;
@@ -122,23 +123,44 @@
 	
 }
 .split-5{
-	font-size: 0px;
 	padding: 0;
 	list-style: none;
 	margin: 0;
+	@include make-row;
 	> li{
-		padding: 0 22px;
-		display: inline-block;
-		vertical-align:top;
+		@include make-sm-column(8);
 		@include rem-font-size(12px);
-		border-right: 1px $clr-green-six solid;
 		color: $clr-green-six;
+		position: relative;
+		height: 252px;
 		&:first-child{
 			padding-left: 0px;
+		}
+		&:nth-child(2){
+			@include make-sm-column(5);
+			&:before{
+				content: "";
+				width: 1px;
+				display: block;
+				height: 100%;
+				position: absolute;
+				background: $clr-green-six;
+				left: -11px;
+			}
 		}
 		&:last-child{
 			padding-right: 0px;
 			border-width: 0px;
+			@include make-sm-column(3);
+			&:before{
+				content: "";
+				width: 1px;
+				display: block;
+				height: 100%;
+				position: absolute;
+				background: $clr-green-six;
+				left: -11px;
+			}
 		}
 	}
 	
@@ -150,13 +172,14 @@
 	list-style: none;
 	margin: 0;
 	> li{
-		padding: 0 80px 0 0;
+		padding: 0 22px 0 0;
 		display: inline-block;
 		vertical-align:top;
+		width: 50%;
 		@include rem-font-size(12px);
-		&:last-child{
+		/*&:last-child{
 			padding: 0px;
-		}
+		}*/
 	}
 }
 
@@ -169,8 +192,136 @@
 		list-style: none;
 		display: block;
 		padding: 5px 0;
+		position: relative;
+		padding-left: 15px;
+		&:before{
+			content: "";
+			display: inline-block;
+			position: absolute;
+			width: 10px;
+			height: 27px;
+			background: url(images/icn-sprites.png) no-repeat;
+			background-position: -15px -74px;
+			left: 0;
+			top: 0;
+
+		}
 	}
 	a{
 		color: $clr-green-five;
+		text-decoration: none;
+		&:hover, &:focus{
+			color: white;
+		}
+	}
+}
+.group-newsletter{
+	.form-control{
+		height: 40px;
+	
+		border: none;
+		&:first-child{
+			border-radius: 0px;
+			@include rem-font-size(14px);
+		}
+	}
+	.input-group-btn:last-child > .btn{
+		height: 40px;
+		width: 50px;
+		border-radius: 0px;
+		background: $clr-red-one;
+		border: none;
+		background: url(images/icn-sprites.png) no-repeat $clr-red-one;
+		background-position:-28px -67px;
+		text-indent: -9999px;
+		&:hover, &:focus{
+			background-color: $clr-grey-one;
+		}
+	}
+}
+
+.newsletter{
+	padding-right: 22px !important;
+	.content{
+		line-height: 1.8;
+		margin-bottom: 10px;
+		.txt{
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.address-block{
+	min-width: 203px;
+	address{
+		display: block;
+		@include rem-font-size(12px);
+		p{
+			line-height: 22px;
+			margin-bottom: 20px;
+		}
+		a{
+			color:$clr-green-five;
+			text-decoration: none;
+			&:hover, &:focus{
+				color: white;
+			}
+		}
+	}
+}
+
+.scl-icns{
+		.title{
+			margin: 0 !important;
+			
+			.md-title{
+				display: inline-block !important;
+				vertical-align: top;
+			}
+		}
+	.icn-float{
+		display: inline-block;
+		margin-top: -6px;
+		vertical-align: top;
+		font-size: 0px;
+		margin-left: 20px;
+		.icn-scl{
+			display: inline-block;
+			width: 32px;
+			height: 32px;
+			background: url(images/icn-sprites.png) no-repeat ;
+			margin: 0 5px;
+			vertical-align: top;
+			position: relative;
+			&:before{
+				content: "";
+				width: 32px;
+				height: 32px;
+				display: block;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0;
+				background: url(images/icn-sprites.png) no-repeat ;
+				transition: opacity 0.8s ease;
+			}
+			&.icn-fb{
+				background-position: -37px -107px;
+				&:before{
+					background-position:-37px -141px
+				}
+			}
+			&.icn-twt{
+				background-position: -2px -107px;
+				&:before{
+					background-position: -2px -141px;
+				}
+			}
+			&:hover, &:focus{
+				&:before{
+					opacity: 1;
+				}
+			}
+		}
 	}
 }

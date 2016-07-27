@@ -48,6 +48,10 @@ $clr-grey-four: #ededed;
 $clr-grey-five: #f4f4f4;
 $clr-grey-six: #d6d6d6;
 $clr-grey-seven: #535353;
+$clr-grey-eight:#383838;
+$clr-grey-nine:#989898;
+
+
 
 
 
@@ -79,11 +83,11 @@ $body-bg:               $clr-grey-two;
 ////
 ////## Font, line-height, and color for body text, headings, and more.
 //
-//$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-//$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  'josefin_sansregular', "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       'merriweatherregular', Georgia, "Times New Roman", Times, serif !default;
 ////** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 //$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-//$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $font-family-serif;
 //
 $font-size-base:          12px !default;
 //$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
@@ -102,8 +106,8 @@ $font-size-base:          12px !default;
 //$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 //
 ////** By default, this inherits from the `<body>`.
-//$headings-font-family:    inherit !default;
-//$headings-font-weight:    500 !default;
+$headings-font-family:    $font-family-sans-serif;
+$headings-font-weight:    700;
 //$headings-line-height:    1.1 !default;
 //$headings-color:          inherit !default;
 //
