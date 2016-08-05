@@ -31,6 +31,10 @@ $clr-green-three: #095928;
 $clr-green-four: #38d877;
 $clr-green-five: #a9e3c0;
 $clr-green-six: #128941;
+$clr-green-seven: #002b11;
+$clr-green-eight: #1eff76;
+$clr-green-nine:#4be487;
+
 
 
 
@@ -50,6 +54,11 @@ $clr-grey-six: #d6d6d6;
 $clr-grey-seven: #535353;
 $clr-grey-eight:#383838;
 $clr-grey-nine:#989898;
+$clr-grey-ten:#b5b5b5;
+$clr-grey-eleven:#757575;
+$clr-grey-twelve:#535353;
+
+
 
 
 
@@ -67,7 +76,8 @@ $clr-grey-nine:#989898;
 ////## Settings for some of the most global styles.
 //
 ////** Background color for `<body>`.
-$body-bg:               $clr-grey-two;
+/*$body-bg:               $clr-grey-two;*/
+$body-bg:               lightgrey;
 ////** Global text color on `<body>`.
 //$text-color:            $gray-dark !default;
 //
@@ -167,7 +177,7 @@ $padding-large-horizontal:  0px !default;
 ////## Customizes the `.table` component with basic values, each used across all table variations.
 //
 ////** Padding for `<th>`s and `<td>`s.
-//$table-cell-padding:            8px !default;
+$table-cell-padding:            12px;
 ////** Padding for cells in `.table-condensed`.
 //$table-condensed-cell-padding:  5px !default;
 //
