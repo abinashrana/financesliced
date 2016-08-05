@@ -1,0 +1,36 @@
+
+.side-block{
+	border-bottom: 1px $clr-grey-five solid;
+	padding: 0;
+	padding-bottom: 22px;
+	margin-bottom: 22px;
+}
+
+.news-sidebar{
+	@extend .side-block;
+	.news-list{
+		> li{
+			width: 100%;
+		}
+	}
+	.news-block {
+		padding: 0px 0 22px 0;
+		.img-holder{
+			display: block;
+			img{
+				@include img-responsive;
+				width: 100%;
+			}
+		}
+	}
+	.btn-links{
+		margin: 0;
+	}
+}
+
+.pub-sidebar{
+	@extend .side-block;
+	.publication{
+		
+	}
+}
