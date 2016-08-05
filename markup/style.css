@@ -10,7 +10,7 @@ Text Domain: base
 Tags: one-column, two-columns
 Theme URI:
 */
-/*$body-bg:               $clr-grey-two;*/
+/*$body-bg:               lightgrey;*/
 @font-face {
   font-family: 'josefin_sansbold';
   src: url("fonts/webfonts/josefinsans-bold-webfont.woff2") format("woff2"), url("fonts/webfonts/josefinsans-bold-webfont.woff") format("woff");
@@ -4140,7 +4140,7 @@ img.mfp-img {
     .cms-wrapper table > tbody + tbody {
       border-top: 2px solid #ddd; }
     .cms-wrapper table .table {
-      background-color: lightgrey; }
+      background-color: #fafafa; }
     .cms-wrapper table > thead > tr > th,
     .cms-wrapper table > thead > tr > td,
     .cms-wrapper table > tbody > tr > th,
