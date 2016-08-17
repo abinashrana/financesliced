@@ -235,6 +235,12 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 				color: $clr-grey-one;
 				@include rem-font-size(13px);
 				border-bottom: 0px $clr-grey-twelve solid;
+				border-radius: 5px;
+				&:hover, &:focus{
+					background: $clr-grey-one;
+					color: white;
+					border-radius: 5px;
+				}
 			}
 			@include media('>=desktop') {
 				@include rem-font-size(15px);
@@ -243,6 +249,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 				padding-bottom: 16.5px;
 				
 			}
+		
 		}
 		&.active{
 			> a{
@@ -266,15 +273,17 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 			background: $clr-grey-one;
 			border-radius: 0px;
 			border: none;
-			box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+			box-shadow: 0 0px 0px rgba(0, 0, 0,0);
 			padding: 0;
-			top: 58px !important;
+			/*top: 58px !important;*/
+			top: 37px !important;
 		}
 		@include media('>=tablet-end') {
-			top: 71px !important;
+			/*top: 71px !important;*/
+			top: 37px !important;
 		}
 		@include media('>=desktop') {
-			top: 86px !important;
+			top: 46px !important;
 		}
 	}
 	.dropdown-menu{
@@ -319,8 +328,9 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 color: $clr-green-one;
 outline: none;
 	@include media('>=tablet') {
-		background: white;
-		color: $clr-red-one;
+		background: $clr-grey-one;
+		color: white;
+		border-radius: 5px;
 	}
 }
 
