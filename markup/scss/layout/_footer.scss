@@ -401,13 +401,13 @@
 		margin-left: 20px;
 		.icn-scl{
 			display: inline-block;
-			width: 32px;
-			height: 32px;
-			background: url(images/icn-sprites.png) no-repeat ;
+			width: 34px;
+			height: 34px;
+			background: url(images/icn-sprites.png) no-repeat;
 			margin: 0 5px;
 			vertical-align: top;
 			position: relative;
-			&:before{
+		/*	&:before{
 				content: "";
 				width: 32px;
 				height: 32px;
@@ -418,26 +418,26 @@
 				opacity: 0;
 				background: url(images/icn-sprites.png) no-repeat ;
 				transition: opacity 0.8s ease;
-			}
+			}*/
 			&.icn-fb{
 				/*background-position: -37px -107px;*/
-				background-position:-37px -141px;
-				&:before{
-					background-position:-37px -141px
+				background-position: -35px -106px;
+				&:hover, &:focus{
+					background-position:-35px -140px;
 				}
 			}
 			&.icn-twt{
 				/*background-position: -2px -107px;*/
-				background-position: -2px -141px;
-				&:before{
-					background-position: -2px -141px;
+				background-position: -1px -106px;
+				&:hover, &:focus{
+					background-position: -1px -140px;
 				}
 			}
-			&:hover, &:focus{
+			/*&:hover, &:focus{
 				&:before{
 					opacity: 0.8;
 				}
-			}
+			}*/
 		}
 	}
 }
@@ -516,9 +516,10 @@
 		}
 	}
 	.modal-dialog{
-		margin: 0 auto;
+		margin: 0 15px;
 		margin-top: 60px;
 		@include media('>=tablet') {
+			margin: 0 auto;
 			margin-top: 60px;
 		}
 	}

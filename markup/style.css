@@ -1163,7 +1163,11 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
           color: #424242;
           font-size: 13px;
           font-size: 1.3rem;
-          border-bottom: 0px #535353 solid; } }
+          border-bottom: 0px #535353 solid;
+          border-radius: 5px; }
+          .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+            background: #424242;
+            color: white; } }
       @media (min-width: 1200px) {
         .navbar-nav > li > a {
           font-size: 15px;
@@ -1188,15 +1192,15 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
       background: #424242;
       border-radius: 0px;
       border: none;
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+      box-shadow: 0 0px 0px transparent;
       padding: 0;
-      top: 58px !important; } }
+      top: 37px !important; } }
   @media (min-width: 992px) {
     .navbar-nav .open .dropdown-menu {
-      top: 71px !important; } }
+      top: 37px !important; } }
   @media (min-width: 1200px) {
     .navbar-nav .open .dropdown-menu {
-      top: 86px !important; } }
+      top: 45px !important; } }
   .navbar-nav .dropdown-menu {
     border-radius: 0px;
     padding: 0; }
@@ -1236,8 +1240,8 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
   outline: none; }
   @media (min-width: 768px) {
     .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-      background: white;
-      color: #e63337; } }
+      background: #424242;
+      color: white; } }
 
 @media (max-width: 767px) {
   /*.navbar-collapse{
@@ -2418,7 +2422,6 @@ img.mfp-img {
     padding-right: 11px;
     font-size: 12px;
     font-size: 1.2rem;
-<<<<<<< Updated upstream
     color: #128941;
     position: relative;
     /*&:first-child{
@@ -2433,12 +2436,6 @@ img.mfp-img {
         .split-5 > li:nth-child(2) {
           float: left;
           width: 100%; } }
-=======
-    border-right: 1px #128941 solid;
-    color: #128941; }
-    .split-5 > li:first-child {
-      padding-left: 0px; }
->>>>>>> Stashed changes
     .split-5 > li:last-child {
       padding-right: 0px;
       border-width: 0px;
@@ -2669,36 +2666,39 @@ img.mfp-img {
   margin-left: 20px; }
   .scl-icns .icn-float .icn-scl {
     display: inline-block;
-    width: 32px;
-    height: 32px;
+    width: 34px;
+    height: 34px;
     background: url(images/icn-sprites.png) no-repeat;
     margin: 0 5px;
     vertical-align: top;
-    position: relative; }
-    .scl-icns .icn-float .icn-scl:before {
-      content: "";
-      width: 32px;
-      height: 32px;
-      display: block;
-      left: 0;
-      top: 0;
-      position: absolute;
-      opacity: 0;
-      background: url(images/icn-sprites.png) no-repeat;
-      -webkit-transition: opacity 0.8s ease;
-              transition: opacity 0.8s ease; }
+    position: relative;
+    /*	&:before{
+				content: "";
+				width: 32px;
+				height: 32px;
+				display: block;
+				left: 0;
+				top: 0;
+				position: absolute;
+				opacity: 0;
+				background: url(images/icn-sprites.png) no-repeat ;
+				transition: opacity 0.8s ease;
+			}*/
+    /*&:hover, &:focus{
+				&:before{
+					opacity: 0.8;
+				}
+			}*/ }
     .scl-icns .icn-float .icn-scl.icn-fb {
       /*background-position: -37px -107px;*/
-      background-position: -37px -141px; }
-      .scl-icns .icn-float .icn-scl.icn-fb:before {
-        background-position: -37px -141px; }
+      background-position: -35px -106px; }
+      .scl-icns .icn-float .icn-scl.icn-fb:hover, .scl-icns .icn-float .icn-scl.icn-fb:focus {
+        background-position: -35px -140px; }
     .scl-icns .icn-float .icn-scl.icn-twt {
       /*background-position: -2px -107px;*/
-      background-position: -2px -141px; }
-      .scl-icns .icn-float .icn-scl.icn-twt:before {
-        background-position: -2px -141px; }
-    .scl-icns .icn-float .icn-scl:hover:before, .scl-icns .icn-float .icn-scl:focus:before {
-      opacity: 0.8; }
+      background-position: -1px -106px; }
+      .scl-icns .icn-float .icn-scl.icn-twt:hover, .scl-icns .icn-float .icn-scl.icn-twt:focus {
+        background-position: -1px -140px; }
 
 .ftr-end {
   background: #266d3a;
@@ -2771,10 +2771,11 @@ img.mfp-img {
     height: auto; }
 
 .modal-popup .modal-dialog {
-  margin: 0 auto;
+  margin: 0 15px;
   margin-top: 60px; }
   @media (min-width: 768px) {
     .modal-popup .modal-dialog {
+      margin: 0 auto;
       margin-top: 60px; } }
 
 .feedback-btn {
