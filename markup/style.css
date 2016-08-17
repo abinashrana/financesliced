@@ -2418,6 +2418,7 @@ img.mfp-img {
     padding-right: 11px;
     font-size: 12px;
     font-size: 1.2rem;
+<<<<<<< Updated upstream
     color: #128941;
     position: relative;
     /*&:first-child{
@@ -2432,6 +2433,12 @@ img.mfp-img {
         .split-5 > li:nth-child(2) {
           float: left;
           width: 100%; } }
+=======
+    border-right: 1px #128941 solid;
+    color: #128941; }
+    .split-5 > li:first-child {
+      padding-left: 0px; }
+>>>>>>> Stashed changes
     .split-5 > li:last-child {
       padding-right: 0px;
       border-width: 0px;
