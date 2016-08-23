@@ -200,10 +200,9 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 		@include media('>=tablet-end') {
 			display: inline-block !important;
 			margin: 11px 0;
-		
 			width: auto;
 			float: right;
-			margin-right: -11px;
+			margin-right: -22px;
 		}
 	}
 }
@@ -287,6 +286,8 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 		border-radius: 0px;
 		padding: 0;
 		@include media('>=tablet') {
+			background: none;
+			border-radius: 7px;
 			top: 58px !important;
 			> li {
 				position: relative;
@@ -298,10 +299,13 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 					color: white;
 					background-color: $clr-grey-one;
 					border-bottom: 1px $clr-grey-eleven solid;
-				
+					
 					@include media('>=desktop') {
 						min-width: 240px;
 						@include rem-font-size(13px);
+					}
+					&:hover,&:focus,&:active{
+						background-color: $clr-grey-thirteen;
 					}
 				}
 				.dropdown-menu{
