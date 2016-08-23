@@ -520,6 +520,9 @@
 	list-style: none;
 	margin-bottom: 22px;
 	@include rem-font-size(12px);
+	a{
+		color: $clr-grey-one;
+	}
 	> li{
 		display: block;
 		padding: 3px 0;
