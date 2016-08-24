@@ -2104,11 +2104,13 @@ img.mfp-img {
   font-size: 1.4rem;
   cursor: pointer;
   height: 48px;
-  width: 49px;
+  min-width: 49px;
   color: white;
   background: #e63337;
   font-family: 'josefin_sansregular';
-  outline: none; }
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px; }
   .sbtn:hover, .sbtn:focus {
     background-color: #266d3a; }
 
@@ -2811,7 +2813,7 @@ img.mfp-img {
     .feedback-btn {
       position: fixed;
       box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
-      right: 20px;
+      left: 20px;
       bottom: 20px;
       width: 100px;
       height: 100px;
@@ -2945,6 +2947,46 @@ img.mfp-img {
 
 .modal-backdrop {
   background-color: #002b11; }
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  width: 40px;
+  height: 40px;
+  display: block;
+  text-decoration: none;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s ease; }
+  @media (min-width: 768px) {
+    #return-to-top {
+      width: 50px;
+      height: 50px; } }
+
+#return-to-top i {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  left: 12px;
+  top: 9px;
+  font-size: 19px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  @media (min-width: 768px) {
+    #return-to-top i {
+      left: 16px;
+      top: 13px; } }
+
+#return-to-top:hover {
+  background: rgba(0, 0, 0, 0.9); }
+
+#return-to-top:hover i {
+  color: #fff;
+  top: 5px; }
 
 .block-row, .block-one, .block-two, .block-three, .block-five, .block-six {
   /*	border-bottom: 1px $clr-grey-four solid;*/
