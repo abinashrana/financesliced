@@ -407,7 +407,11 @@
 			margin: 0 5px;
 			vertical-align: top;
 			position: relative;
+<<<<<<< HEAD
 			/*&:before{
+=======
+		/*	&:before{
+>>>>>>> gh-pages
 				content: "";
 				width: 32px;
 				height: 32px;
@@ -421,22 +425,35 @@
 			}*/
 			&.icn-fb{
 				/*background-position: -37px -107px;*/
+<<<<<<< HEAD
 				/*background-position:-35px -140px;*/
 				background-position: -35px -106px;
 				&:hover,&:focus{
+=======
+				background-position: -35px -106px;
+				&:hover, &:focus{
+>>>>>>> gh-pages
 					background-position:-35px -140px;
 				}
 			}
 			&.icn-twt{
 				/*background-position: -2px -107px;*/
+<<<<<<< HEAD
 				/*background-position: -1px -140px;*/
 				background-position: -1px -106px;
 				&:hover,&:focus{
+=======
+				background-position: -1px -106px;
+				&:hover, &:focus{
+>>>>>>> gh-pages
 					background-position: -1px -140px;
 				}
 			}
 			/*&:hover, &:focus{
+<<<<<<< HEAD
 				background: red;
+=======
+>>>>>>> gh-pages
 				&:before{
 					opacity: 1;
 				}
@@ -547,7 +564,7 @@
 	@include media('>=desktop') {
 		position: fixed;
 		box-shadow: 0px 0px 7px rgba(0,0,0,0.3);
-		right: 20px;
+		left: 20px;
 		bottom: 20px;
 		width: 100px;
 		height: 100px;
@@ -690,4 +707,54 @@
 
 .modal-backdrop{
 	background-color:$clr-green-seven ;
+}
+
+#return-to-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	width: 40px;
+	height: 40px;
+	display: block;
+	text-decoration: none;
+	-webkit-border-radius: 35px;
+	-moz-border-radius: 35px;
+	border-radius: 35px;
+	display: none;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	@include media('>=tablet') {
+		width: 50px;
+		height: 50px;
+	}
+}
+#return-to-top i {
+	color: #fff;
+	margin: 0;
+	position: relative;
+	left: 12px;
+	top: 9px;
+	
+	font-size: 19px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	@include media('>=tablet') {
+		left: 16px;
+		top: 13px;
+	}
+}
+#return-to-top:hover {
+	background: rgba(0, 0, 0, 0.9);
+}
+#return-to-top:hover i {
+	color: #fff;
+	top: 5px;
 }

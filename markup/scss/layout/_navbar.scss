@@ -200,10 +200,9 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 		@include media('>=tablet-end') {
 			display: inline-block !important;
 			margin: 11px 0;
-		
 			width: auto;
 			float: right;
-			margin-right: -11px;
+			margin-right: -22px;
 		}
 	}
 }
@@ -236,10 +235,16 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 				@include rem-font-size(13px);
 				border-bottom: 0px $clr-grey-twelve solid;
 				border-radius: 5px;
+<<<<<<< HEAD
 				&:hover, &:focus{
 					background: $clr-grey-one;
 					color: white;
 					border-radius: 5px;
+=======
+				&:hover,&:focus{
+					background: $clr-grey-one;
+					color: white;
+>>>>>>> gh-pages
 				}
 			}
 			@include media('>=desktop') {
@@ -270,9 +275,10 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 	}
 	.open .dropdown-menu{
 		@include media('>=tablet') {
-			background: $clr-grey-one;
-			border-radius: 0px;
+			background: none;
+			border-radius: 0px 5px 5px 5px;
 			border: none;
+<<<<<<< HEAD
 			box-shadow: 0 0px 0px rgba(0, 0, 0,0);
 			padding: 0;
 			/*top: 58px !important;*/
@@ -284,12 +290,26 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 		}
 		@include media('>=desktop') {
 			top: 46px !important;
+=======
+			box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+			padding: 0;
+			top: 37px !important;
+			background: red;
+		}
+		@include media('>=tablet-end') {
+			top: 37px !important;
+		}
+		@include media('>=desktop') {
+			top: 45px !important;
+>>>>>>> gh-pages
 		}
 	}
 	.dropdown-menu{
 		border-radius: 0px;
 		padding: 0;
 		@include media('>=tablet') {
+			background: none;
+			border-radius: 7px;
 			top: 58px !important;
 			> li {
 				position: relative;
@@ -301,14 +321,34 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 					color: white;
 					background-color: $clr-grey-one;
 					border-bottom: 1px $clr-grey-eleven solid;
+					
 					@include media('>=desktop') {
 						min-width: 240px;
 						@include rem-font-size(13px);
+					}
+					&:hover,&:focus,&:active{
+						background-color: $clr-grey-thirteen;
 					}
 				}
 				.dropdown-menu{
 					top:0 !important;
 					margin-top: 0px !important;
+				}
+				&:first-child{
+					> a{
+						@include media('>=tablet') {
+							border-radius: 0px 5px 0px 0px;
+						
+						}
+					}
+				}
+				&:last-child{
+					> a{
+						@include media('>=tablet') {
+							border-radius: 0px 0px 5px 5px;
+							border-bottom-width: 0px;
+						}
+					}
 				}
 			}
 		}	
@@ -330,7 +370,10 @@ outline: none;
 	@include media('>=tablet') {
 		background: $clr-grey-one;
 		color: white;
+<<<<<<< HEAD
 		border-radius: 5px;
+=======
+>>>>>>> gh-pages
 	}
 }
 

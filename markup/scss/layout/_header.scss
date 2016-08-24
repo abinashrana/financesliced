@@ -327,11 +327,13 @@
 	@include rem-font-size(14px);
 	cursor: pointer;
 	height: 48px;
-	width: 49px;
+	min-width: 49px;
 	color: white;
 	background: $clr-red-one;
 	font-family: 'josefin_sansregular';
 	outline: none;
+	padding-left: 10px;
+	padding-right: 10px;
 	&:hover, &:focus{
 		background-color: $clr-green-two;
 	}

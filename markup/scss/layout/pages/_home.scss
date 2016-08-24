@@ -84,6 +84,7 @@
 			padding-left: 22px;
 			border-left: 1px $clr-grey-four solid;
 			padding: 11px 0;
+			padding-left: 22px;
 		}
 	}
 	@include media('>=tablet') {
@@ -519,6 +520,9 @@
 	list-style: none;
 	margin-bottom: 22px;
 	@include rem-font-size(12px);
+	a{
+		color: $clr-grey-one;
+	}
 	> li{
 		display: block;
 		padding: 3px 0;
