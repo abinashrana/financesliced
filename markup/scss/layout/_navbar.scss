@@ -182,27 +182,29 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 			width: 100%;
 			text-align: center;
 			height: 39px;
+			border-top: 1px $clr-grey-four solid;
+			margin: 15px 0 0 0;
 		}
 		@include media('>=desktop') {
-			height: 50px;
-			margin: 5px 0;
+			height: 55px;
+			margin: 25px 0 0 0;
 		}
 	}
-	
+
 	&.collapse{
 		@include media('>=tablet') {
 			display: block;
-
 			padding: 0;
-			margin-top: 22px;
+			margin-top: 10px;
 			width: auto;
+			clear: left;
 		}
 		@include media('>=tablet-end') {
-			display: inline-block !important;
-			margin: 11px 0;
-			width: auto;
-			float: right;
-			margin-right: -22px;
+			display:block !important;
+			margin: 0 -22px;
+		/*	width: 100%;*/
+			clear: left;
+		/*	margin-right: -22px;*/
 		}
 	}
 }
@@ -211,7 +213,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 	@include media('>=tablet') {
 		background: none;
 	}
-	
+
 }
 
 .navbar-nav{
@@ -230,31 +232,20 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 			letter-spacing: 0.01em;
 			@include media('>=tablet') {
 				background: none;
-				padding: 12px 15px;
+				padding: 12px 10px;
 				color: $clr-grey-one;
-				@include rem-font-size(13px);
+				@include rem-font-size(12px);
 				border-bottom: 0px $clr-grey-twelve solid;
 				border-radius: 5px;
-<<<<<<< HEAD
-				&:hover, &:focus{
-					background: $clr-grey-one;
-					color: white;
-					border-radius: 5px;
-=======
 				&:hover,&:focus{
 					background: $clr-grey-one;
 					color: white;
->>>>>>> gh-pages
 				}
 			}
 			@include media('>=desktop') {
 				@include rem-font-size(15px);
-				padding: 0 18px;
-				padding-top: 16.5px;
-				padding-bottom: 16.5px;
-				
+				padding: 19px 18px;
 			}
-		
 		}
 		&.active{
 			> a{
@@ -266,7 +257,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 			}
 		}
 	}
-	
+
 	@include media('>=tablet') {
 		margin: 0;
 		width: auto;
@@ -278,19 +269,6 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 			background: none;
 			border-radius: 0px 5px 5px 5px;
 			border: none;
-<<<<<<< HEAD
-			box-shadow: 0 0px 0px rgba(0, 0, 0,0);
-			padding: 0;
-			/*top: 58px !important;*/
-			top: 37px !important;
-		}
-		@include media('>=tablet-end') {
-			/*top: 71px !important;*/
-			top: 37px !important;
-		}
-		@include media('>=desktop') {
-			top: 46px !important;
-=======
 			box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
 			padding: 0;
 			top: 37px !important;
@@ -301,7 +279,6 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 		}
 		@include media('>=desktop') {
 			top: 45px !important;
->>>>>>> gh-pages
 		}
 	}
 	.dropdown-menu{
@@ -321,7 +298,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 					color: white;
 					background-color: $clr-grey-one;
 					border-bottom: 1px $clr-grey-eleven solid;
-					
+
 					@include media('>=desktop') {
 						min-width: 240px;
 						@include rem-font-size(13px);
@@ -338,7 +315,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 					> a{
 						@include media('>=tablet') {
 							border-radius: 0px 5px 0px 0px;
-						
+
 						}
 					}
 				}
@@ -365,15 +342,11 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
 	background-color: $clr-grey-two;
-color: $clr-green-one;
-outline: none;
+	color: $clr-green-one;
+	outline: none;
 	@include media('>=tablet') {
 		background: $clr-grey-one;
 		color: white;
-<<<<<<< HEAD
-		border-radius: 5px;
-=======
->>>>>>> gh-pages
 	}
 }
 
@@ -381,16 +354,21 @@ outline: none;
 
 @media (max-width: 767px){
 	/*.navbar-collapse{
-		margin: 0 -22px;
-		position: absolute;
-		width: 100%;
-		top: -21px;
-		.navbar-nav{
-			margin:0 -11px;
-		}
+	margin: 0 -22px;
+	position: absolute;
+	width: 100%;
+	top: -21px;
+	.navbar-nav{
+	margin:0 -11px;
+}
 }*/
 	.navbar-collapse{
-		margin: 0 -22px;
+		margin: 0;
+		position: absolute;
+		z-index: 1000;
+		width: 100%;
+		top: -31px;
+		left:0;
 		.navbar-nav{
 			margin:0 -11px;
 			margin-top: 15px;

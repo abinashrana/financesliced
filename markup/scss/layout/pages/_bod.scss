@@ -1,3 +1,15 @@
+.title-txt{
+	width: 100%;
+	text-align:center;
+	margin: 0 0 25px 0;
+	color: $clr-red-one;
+	line-height: 1.4;
+	@include rem-font-size(18px);
+	@include media('>=phone') {
+		@include rem-font-size(22px);
+	}
+}
+
 .bod-list{
 	display: block;
 	font-size: 0px;
@@ -16,6 +28,45 @@
 		@include media('>=tablet-end') {
 			display: inline-block;
 			width: 25%;
+		}
+		&.bod-head{
+			width: 100%;
+			.profile-block{
+				max-width: 100%;
+				margin: 0 auto;
+				margin-bottom: 16px;
+				position: relative;
+			
+				&:before,&:after{
+					content: "";
+					width: 50px;
+					height: 42px;
+					position: absolute;
+					left: 0;
+					bottom: 22px;
+					background: url(images/icn-floral.png) no-repeat;
+					background-size: 100px auto;
+					@include media('>=tablet-end') {
+						width: 100px;
+						height: 83px;
+						background-size: 200px auto;
+					}
+				}
+				&:after{
+					left:auto;
+					right: 0;
+					background-position: 100% 0;
+				}
+				.img-holder{
+					max-width: 221px;
+					margin: 0 auto;
+				}
+				@include media('>=tablet') {
+					margin: 0 auto;
+					margin-bottom: 22px;
+					padding-bottom: 22px;
+				}
+			}
 		}
 	}
 }
