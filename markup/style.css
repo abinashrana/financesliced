@@ -1116,24 +1116,27 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
       display: block;
       width: 100%;
       text-align: center;
-      height: 39px; } }
+      height: 39px;
+      border-top: 1px #ededed solid;
+      margin: 15px 0 0 0; } }
   @media (min-width: 1200px) {
     .navbar-collapse .nav-align {
-      height: 50px;
-      margin: 5px 0; } }
+      height: 55px;
+      margin: 25px 0 0 0; } }
   @media (min-width: 768px) {
     .navbar-collapse.collapse {
       display: block;
       padding: 0;
-      margin-top: 22px;
-      width: auto; } }
+      margin-top: 10px;
+      width: auto;
+      clear: left; } }
   @media (min-width: 992px) {
     .navbar-collapse.collapse {
-      display: inline-block !important;
-      margin: 11px 0;
-      width: auto;
-      float: right;
-      margin-right: -22px; } }
+      display: block !important;
+      margin: 0 -22px;
+      /*	width: 100%;*/
+      clear: left;
+      /*	margin-right: -22px;*/ } }
 
 .nav > li > a:hover, .nav > li > a:focus {
   background-color: #424242; }
@@ -1159,10 +1162,10 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
       @media (min-width: 768px) {
         .navbar-nav > li > a {
           background: none;
-          padding: 12px 15px;
+          padding: 12px 10px;
           color: #424242;
-          font-size: 13px;
-          font-size: 1.3rem;
+          font-size: 12px;
+          font-size: 1.2rem;
           border-bottom: 0px #535353 solid;
           border-radius: 5px; }
           .navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
@@ -1172,9 +1175,7 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
         .navbar-nav > li > a {
           font-size: 15px;
           font-size: 1.5rem;
-          padding: 0 18px;
-          padding-top: 16.5px;
-          padding-bottom: 16.5px; } }
+          padding: 19px 18px; } }
     .navbar-nav > li.active > a {
       background-color: #e63337; }
       @media (min-width: 768px) {
@@ -1257,16 +1258,21 @@ These are theme independent and should work with any Bootstrap 3 theme mod.
 
 @media (max-width: 767px) {
   /*.navbar-collapse{
-		margin: 0 -22px;
-		position: absolute;
-		width: 100%;
-		top: -21px;
-		.navbar-nav{
-			margin:0 -11px;
-		}
+	margin: 0 -22px;
+	position: absolute;
+	width: 100%;
+	top: -21px;
+	.navbar-nav{
+	margin:0 -11px;
+}
 }*/
   .navbar-collapse {
-    margin: 0 -22px; }
+    margin: 0;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    top: -31px;
+    left: 0; }
     .navbar-collapse .navbar-nav {
       margin: 0 -11px;
       margin-top: 15px; }
@@ -1879,7 +1885,7 @@ img.mfp-img {
   padding: 15px 0; }
   @media (min-width: 768px) {
     .hdr-bottom {
-      padding: 20px 0; } }
+      padding: 20px 0 0 0; } }
 
 .red-bar {
   background: #e63337;
@@ -1939,6 +1945,10 @@ img.mfp-img {
         color: white; }
       .sm-info.language .txt:hover, .sm-info.language .txt:focus {
         color: white; }
+      .sm-info.language .txt.nepali {
+        font-size: 14px;
+        font-size: 1.4rem;
+        line-height: 12px; }
     @media (min-width: 768px) {
       .sm-info.language {
         margin: 0;
@@ -2220,58 +2230,86 @@ img.mfp-img {
   width: 100%;
   float: none;
   color: #1a974b;
-  text-align: center; }
-  .logo span {
-    font-size: 22px;
-    font-size: 2.2rem;
-    padding: 3px 0;
-    /*display: block;
-		margin-left: 83px;*/
-    line-height: 1.3;
-    position: relative;
-    width: auto;
-    display: inline-block;
-    padding-left: 80px;
-    font-family: 'merriweatherlight';
-    letter-spacing: 0.05em; }
-    .logo span:before {
-      content: "";
-      width: 67px;
-      height: 62px;
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: url(images/img-logo.png) no-repeat;
-      background-size: auto 62px; }
-      @media (min-width: 1200px) {
-        .logo span:before {
-          background-size: auto 82px;
-          width: 90px;
-          height: 82px; } }
-    @media (min-width: 1200px) {
-      .logo span {
-        height: 82px;
-        padding: 10px 0;
-        background-size: auto 82px;
-        margin-left: 0;
-        padding-left: 110px;
-        font-size: 27px;
-        font-size: 2.7rem;
-        line-height: 1.2; } }
-  @media (min-width: 992px) {
-    .logo {
-      display: inline-block;
-      float: left;
-      width: auto;
-      margin-left: -11px; } }
-  @media (min-width: 992px) {
-    .logo {
-      margin-left: 0; } }
-  @media (min-width: 1200px) {
-    .logo {
-      height: 82px; } }
+  text-align: center;
+  width: 150px;
+  height: 62px;
+  background: url(images/img-logo.png) no-repeat;
+  background-size: auto 62px;
+  margin: 0 auto; }
   .logo:hover, .logo:focus {
     color: #266d3a; }
+  @media (min-width: 768px) {
+    .logo {
+      float: left;
+      display: inline-block;
+      margin-left: -11px; } }
+  @media (min-width: 1200px) {
+    .logo {
+      height: 115px;
+      background-size: auto 115px;
+      width: 300px; } }
+
+.numbers {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  font-size: 0px;
+  line-height: 1.6; }
+  .numbers span {
+    display: block;
+    font-size: 14px;
+    font-size: 1.4rem; }
+  @media (min-width: 480px) {
+    .numbers {
+      display: inline-block;
+      width: 49%;
+      margin: 25px 0 0 0; } }
+  @media (min-width: 768px) {
+    .numbers {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      float: left;
+      margin-left: 25%;
+      margin-top: 10px; } }
+  @media (min-width: 1200px) {
+    .numbers {
+      margin-left: 15%;
+      margin-top: 40px; }
+      .numbers span {
+        font-size: 15px;
+        font-size: 1.5rem; } }
+
+.awards {
+  display: block;
+  vertical-align: top;
+  width: 100%;
+  text-align: center;
+  font-size: 0px; }
+  .awards img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    max-width: 200px; }
+  @media (min-width: 480px) {
+    .awards {
+      display: inline-block;
+      width: 49%;
+      margin: 15px 0 0 0; } }
+  @media (min-width: 768px) {
+    .awards {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      float: right; } }
+  @media (min-width: 1200px) {
+    .awards {
+      margin-top: 10px; }
+      .awards img {
+        max-width: 320px; } }
 
 .footer {
   display: block; }
@@ -2439,8 +2477,8 @@ img.mfp-img {
     color: #128941;
     position: relative;
     /*&:first-child{
-			padding-left: 0px;
-		}*/ }
+		padding-left: 0px;
+	}*/ }
     .split-5 > li:nth-child(2) {
       position: relative;
       min-height: 1px;
@@ -2578,8 +2616,8 @@ img.mfp-img {
     font-size: 12px;
     font-size: 1.2rem;
     /*&:last-child{
-			padding: 0px;
-		}*/ }
+		padding: 0px;
+	}*/ }
     @media (min-width: 480px) {
       .split-6 > li {
         display: inline-block;
@@ -2687,22 +2725,22 @@ img.mfp-img {
     vertical-align: top;
     position: relative;
     /*	&:before{
-				content: "";
-				width: 32px;
-				height: 32px;
-				display: block;
-				left: 0;
-				top: 0;
-				position: absolute;
-				opacity: 0;
-				background: url(images/icn-sprites.png) no-repeat ;
-				transition: opacity 0.8s ease;
-			}*/
+			content: "";
+			width: 32px;
+			height: 32px;
+			display: block;
+			left: 0;
+			top: 0;
+			position: absolute;
+			opacity: 0;
+			background: url(images/icn-sprites.png) no-repeat ;
+			transition: opacity 0.8s ease;
+		}*/
     /*&:hover, &:focus{
-				&:before{
-					opacity: 0.8;
-				}
-			}*/ }
+			&:before{
+			opacity: 0.8;
+		}
+		}*/ }
     .scl-icns .icn-float .icn-scl.icn-fb {
       /*background-position: -37px -107px;*/
       background-position: -35px -106px; }
@@ -4477,6 +4515,15 @@ img.mfp-img {
       height: 35px;
       background: url(images/icn-sprites.png) no-repeat -70px -70px white; }
 
+.report-list > li.doc .cnt-holder .lists:before {
+  background-position: -70px -140px; }
+
+.report-list > li.exl .cnt-holder .lists:before {
+  background-position: -132px -140px; }
+
+.report-list > li.ppt .cnt-holder .lists:before {
+  background-position: -101px -140px; }
+
 .career-list .listing .cnt-holder, .article-listing .listing .cnt-holder {
   width: 100%; }
   .career-list .listing .cnt-holder .lists, .article-listing .listing .cnt-holder .lists {
@@ -4574,45 +4621,58 @@ img.mfp-img {
       .article-list > li a:hover, .article-list > li a:focus {
         color: #424242; }
 
-.gallery-list, .gallery-img {
+.gallery-list, .gallery-img, .legal-img {
   display: block;
   margin: 0 -7px;
   font-size: 0px;
   list-style: none;
   padding: 0; }
-  .gallery-list > li, .gallery-img > li {
+  .gallery-list > li, .gallery-img > li, .legal-img > li {
     padding: 0 7px;
     vertical-align: top;
     display: inline-block;
     width: 50%; }
-    .gallery-list > li:before, .gallery-img > li:before {
+    .gallery-list > li:before, .gallery-img > li:before, .legal-img > li:before {
       display: none; }
     @media (min-width: 480px) {
-      .gallery-list > li, .gallery-img > li {
+      .gallery-list > li, .gallery-img > li, .legal-img > li {
         width: 33.33%;
         padding: 0 11px; } }
     @media (min-width: 768px) {
-      .gallery-list > li, .gallery-img > li {
+      .gallery-list > li, .gallery-img > li, .legal-img > li {
         width: 50%; } }
     @media (min-width: 992px) {
-      .gallery-list > li, .gallery-img > li {
+      .gallery-list > li, .gallery-img > li, .legal-img > li {
         width: 33.33%; } }
   @media (min-width: 480px) {
-    .gallery-list, .gallery-img {
+    .gallery-list, .gallery-img, .legal-img {
       margin: 0 -11px; } }
 
-.gallery-img .img-holder {
+@media (min-width: 480px) {
+  .legal-img > li {
+    width: 33.33%;
+    padding: 0 11px; } }
+
+@media (min-width: 768px) {
+  .legal-img > li {
+    width: 33.33%; } }
+
+@media (min-width: 992px) {
+  .legal-img > li {
+    width: 25%; } }
+
+.gallery-img .img-holder, .legal-img .img-holder {
   margin-bottom: 14px;
   display: block;
   width: 100%;
   position: relative; }
-  .gallery-img .img-holder:before {
+  .gallery-img .img-holder:before, .legal-img .img-holder:before {
     position: absolute;
     content: "";
-    width: 35px;
-    height: 35px;
+    width: 38px;
+    height: 38px;
     background: url(images/icn-sprites.png) no-repeat;
-    background-position: -104px -69px;
+    background-position: 0px -182px;
     top: 50%;
     left: 50%;
     margin-left: -17.5px;
@@ -4620,21 +4680,24 @@ img.mfp-img {
     z-index: 0;
     opacity: 0;
     cursor: pointer; }
-  .gallery-img .img-holder img {
+  .gallery-img .img-holder img, .legal-img .img-holder img {
     display: block;
     max-width: 100%;
     height: auto;
     width: 100%;
     position: relative;
     z-index: 1; }
-  .gallery-img .img-holder:hover, .gallery-img .img-holder:focus {
+  .gallery-img .img-holder:hover, .gallery-img .img-holder:focus, .legal-img .img-holder:hover, .legal-img .img-holder:focus {
     opacity: 0.8; }
-    .gallery-img .img-holder:hover:before, .gallery-img .img-holder:focus:before {
+    .gallery-img .img-holder:hover:before, .gallery-img .img-holder:focus:before, .legal-img .img-holder:hover:before, .legal-img .img-holder:focus:before {
       z-index: 2;
       opacity: 1; }
   @media (min-width: 480px) {
-    .gallery-img .img-holder {
+    .gallery-img .img-holder, .legal-img .img-holder {
       margin-bottom: 22px; } }
+
+.legal-img .img-holder {
+  border: 5px #ececec solid; }
 
 .gallery-block {
   display: block;
@@ -4685,6 +4748,19 @@ img.mfp-img {
 .ekko-lightbox .modal-body {
   padding: 0; }
 
+.title-txt {
+  width: 100%;
+  text-align: center;
+  margin: 0 0 25px 0;
+  color: #e63337;
+  line-height: 1.4;
+  font-size: 18px;
+  font-size: 1.8rem; }
+  @media (min-width: 480px) {
+    .title-txt {
+      font-size: 22px;
+      font-size: 2.2rem; } }
+
 .bod-list {
   display: block;
   font-size: 0px;
@@ -4704,6 +4780,39 @@ img.mfp-img {
       .bod-list li {
         display: inline-block;
         width: 25%; } }
+    .bod-list li.bod-head {
+      width: 100%; }
+      .bod-list li.bod-head .profile-block {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        position: relative; }
+        .bod-list li.bod-head .profile-block:before, .bod-list li.bod-head .profile-block:after {
+          content: "";
+          width: 50px;
+          height: 42px;
+          position: absolute;
+          left: 0;
+          bottom: 22px;
+          background: url(images/icn-floral.png) no-repeat;
+          background-size: 100px auto; }
+          @media (min-width: 992px) {
+            .bod-list li.bod-head .profile-block:before, .bod-list li.bod-head .profile-block:after {
+              width: 100px;
+              height: 83px;
+              background-size: 200px auto; } }
+        .bod-list li.bod-head .profile-block:after {
+          left: auto;
+          right: 0;
+          background-position: 100% 0; }
+        .bod-list li.bod-head .profile-block .img-holder {
+          max-width: 221px;
+          margin: 0 auto; }
+        @media (min-width: 768px) {
+          .bod-list li.bod-head .profile-block {
+            margin: 0 auto;
+            margin-bottom: 22px;
+            padding-bottom: 22px; } }
 
 .profile-block {
   display: block;

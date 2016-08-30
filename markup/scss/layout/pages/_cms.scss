@@ -489,6 +489,35 @@
 			}
 		}
 	}
+	> li{
+		&.doc{
+			.cnt-holder{
+				.lists{
+					&:before{
+						background-position:-70px -140px;
+					}
+				}
+			}
+		}
+		&.exl{
+			.cnt-holder{
+				.lists{
+					&:before{
+						background-position:-132px -140px;
+					}
+				}
+			}
+		}
+		&.ppt{
+			.cnt-holder{
+				.lists{
+					&:before{
+						background-position:-101px -140px;
+					}
+				}
+			}
+		}
+	}
 }
 
 .career-list, .article-listing{
@@ -617,7 +646,7 @@
 }
 
 
-.gallery-list, .gallery-img{
+.gallery-list, .gallery-img, .legal-img{
 		display: block;
 		margin: 0 -7px;
 		font-size: 0px;
@@ -647,9 +676,22 @@
 	}
 }
 
+.legal-img{
+	> li {
+		@include media('>=phone') {
+			width: 33.33%;
+			padding: 0 11px;
+		}
+		@include media('>=tablet') {
+			width: 33.33%;
+		}
+		@include media('>=tablet-end') {
+			width: 25%;
+		}
+	}
+}
 
-
-	.gallery-img{
+.gallery-img, .legal-img{
 		.img-holder{
 			margin-bottom: 14px;
 			display: block;
@@ -658,10 +700,10 @@
 			&:before{
 				position: absolute;
 				content: "";
-				width: 35px;
-				height: 35px;
+				width: 38px;
+				height: 38px;
 				background: url(images/icn-sprites.png) no-repeat;
-				background-position: -104px -69px;
+				background-position: 0px -182px;
 				top: 50%;
 				left: 50%;
 				margin-left: -17.5px;
@@ -678,7 +720,7 @@
 			}
 			&:hover, &:focus{
 				opacity: 0.8;
-				
+
 					&:before{
 						z-index: 2;
 						opacity: 1;
@@ -688,9 +730,14 @@
 			@include media('>=phone') {
 				margin-bottom: 22px;
 			}
+			
 		}
 	}
-
+.legal-img{
+	.img-holder{
+		border: 5px #ececec solid;
+	}
+}
 
 
 .gallery-block{
